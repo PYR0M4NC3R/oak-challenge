@@ -3,7 +3,7 @@ This is an open source project to host checklist guides for completing the Profe
 
 ## Progress
 So far, the following games have checklists in progress:
-- FireRed & LeafGreen
+- [FireRed & LeafGreen](https://pyr0m4nc3r.github.io/oak-challenge/frlg.html)
 
 ## Contributing
 Please create an issue and/or a pull request for anything you would like to add. This could include:
