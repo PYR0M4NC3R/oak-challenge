@@ -443,50 +443,9 @@
       <h3 id="prebadge3">Pre Badge 3</h3>
       <hr>
     </main>
-
-
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script>
-        function saveBoxes(){
-            const boxValues = Array.from(document.querySelectorAll('input[type="checkbox"]')).map(input => input.checked);
-            localStorage.setItem('stored-boxes', JSON.stringify(boxValues));
-        }
-        function updateBoxes(){
-          const boxValues = JSON.parse(localStorage.getItem('stored-boxes'));
-          const boxes = document.querySelectorAll('input[type="checkbox"]');
-          for (let i = 0; i < boxes.length; i++) {
-              boxes[i].checked = boxValues[i];
-              if (boxValues[i]) {
-                boxes[i].parentElement.parentElement.classList.add("success");
-              } else {
-                boxes[i].parentElement.parentElement.classList.remove("success");
-              }
-          }      
-        }
-        $("input[type='checkbox']").change(function(){
-            if($(this).is(":checked")){
-                $(this).parent().parent().addClass("success"); 
-                $(this).addClass();
-            }else{
-                $(this).parent().parent().removeClass("success");  
-            }
-            saveBoxes();
-        });
-        $(document).ready(function(){
-          updateBoxes();
-        });
-        $("#resetbtn").click(function() {
-          const boxValues = JSON.parse(localStorage.getItem('stored-boxes'));
-          const boxes = document.querySelectorAll('input[type="checkbox"]');
-          for (let i = 0; i < boxValues.length; i++) {
-            boxValues[i] = false;
-            boxes[i].checked = false;
-          }
-          saveBoxes();
-          updateBoxes();
-        });
-    </script>
+    <script src="js/checklist.js"></script>
     </body>
 </html>
